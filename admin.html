@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SANAD - لوحة التحكم</title>
+<style>
+body{font-family:system-ui;background:#0f172a;color:white;padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:15px;margin:15px 0}
+button{background:#22c55e;color:white;border:0;padding:10px 20px;border-radius:10px;cursor:pointer;margin:5px}
+input,select{padding:10px;border-radius:8px;border:0;width:100%;margin:5px 0}
+table{width:100%;background:#334155;border-radius:10px}
+td,th{padding:10px;border-bottom:1px solid #475569}
+.bot-box{background:#0ea5e9}
+</style>
+</head>
+<body>
+<h1>🛡️ SANAD - لوحة تحكم الأدمن</h1>
+
+<div class="card">
+<h2>📊 الاحصائيات</h2>
+<p>عدد الطلبات اليوم: <span id="orders">0</span></p>
+<p>مشتركين فعالين: <span id="active">12</span></p>
+<p>الأرباح: <span id="money">0</span> ل.س</p>
+</div>
+
+<div class="card">
+<h2>✅ طلبات جديدة - الموافقة</h2>
+<table>
+<tr><th>الاسم</th><th>الخدمة</th><th>المدة</th><th>تحكم</th></tr>
+<tr><td>محمد - محل موبايلات</td><td>باقة البداية</td><td>30 يوم</td><td><button onclick="approve(this)">موافقة ✅</button><button style="background:red">رفض</button></td></tr>
+<tr><td>احمد - سوبرماركت</td><td>باقة بر
