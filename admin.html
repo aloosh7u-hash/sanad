@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<title>لوحة تحكم سند</title>
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>لوحة سند السرية</title><script src="https://cdn.tailwindcss.com"></script></head>
 <body class="bg-black text-white p-4">
-<h1 class="text-2xl font-black mb-1">لوحة سند - علوش</h1>
-<p class="text-gray-400 text-sm mb-6">إدارة اشتراكات البوت</p>
+<script>
+let pass = prompt("كلمة سر الادمن:");
+if(pass !== "aloosh123"){ document.body.innerHTML = "<h1 style='text-align:center;margin-top:100px'>ممنوع الدخول يا حبيب</h1>"; throw ""; }
+</script>
 
-<div class="grid grid-cols-3 gap-2 mb-6">
-  <div class="bg-zinc-900 p-3 rounded-xl text-center"><p class="text-2xl font-bold">0</p><p class="text-xs text-gray-400">بانتظار الموافقة</p></div>
-  <div class="bg-zinc-900 p-3 rounded-xl text-center"><p class="text-2xl font-bold">0</p><p class="text-xs text-gray-400">مشترك فعال</p></div>
-  <div class="bg-zinc-900 p-3 rounded-xl text-center"><p class="text-2xl font-bold">$0</p><p class="text-xs text-gray-400">الأرباح</p></div>
+<h1 class="text-2xl font-black">لوحة تحكم سند - علوش فقط 👑</h1>
+<p class="text-xs text-gray-400 mb-4">كلمة السر: aloosh123 - لا تعطيها لحدا</p>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+  <div class="bg-zinc-900 p-4 rounded-2xl text-center"><p class="text-3xl font-black" id="total">12</p><p class="text-xs text-gray-400">إجمالي المشتركين</p></div>
+  <div class="bg-zinc-900 p-4 rounded-2xl text-center"><p class="text-3xl font-black text-green-400">$85</p><p class="text-xs text-gray-400">الأرباح هذا الشهر</p></div>
+  <div class="bg-zinc-900 p-4 rounded-2xl text-center"><p class="text-3xl font-black" id="days">27</p><p class="text-xs text-gray-400">متوسط أيام الاشتراك</p></div>
+  <div class="bg-zinc-900 p-4 rounded-2xl text-center"><p class="text-3xl font-black text-yellow-400">3</p><p class="text-xs text-gray-400">بانتظار التفعيل</p></div>
 </div>
 
 <div class="bg-zinc-900 p-4 rounded-2xl">
-  <h3 class="font-bold mb-3">طلبات جديدة</h3>
-  <div id="orders" class="space-y-2">
-    <div class="bg-black p-3 rounded-xl flex justify-between items-center">
-      <div><p class="font-bold text-sm">مثال: زبون واتساب - 5$</p><p class="text-xs text-gray-400">0949xxx - دفع شام كاش</p></div>
-      <div class="flex gap-2">
-        <button onclick="alert('تمت الموافقة')" class="bg-green-500 text-black px-3 py-1 rounded-full text-xs font-bold">موافقة</button>
-        <button onclick="alert('تم الرفض')" class="bg-zinc-800 px-3 py-1 rounded-full text-xs">رفض</button>
-      </div>
-    </div>
+  <h3 class="font-bold mb-3">سجل الاشتراكات</h3>
+  <div class="bg-black p-3 rounded-xl flex justify-between items-center mb-2">
+    <div><p class="text-sm font-bold">0949xxxx - شامل 15$</p><p class="text-xs text-gray-400">منذ يومين - شام كاش</p></div>
+    <span class="bg-green-500 text-black px-3 py-1 rounded-full text-xs font-bold">فعال 28 يوم</span>
   </div>
-  <p class="text-xs text-gray-500 mt-4 text-center">لاحقاً رح تنربط تلقائياً مع الواتساب والبوت</p>
-</div>
-
-<div class="mt-6 text-center">
-  <a href="index.html" class="text-xs text-gray-400 underline">العودة للموقع</a>
+  <div class="bg-black p-3 rounded-xl flex justify-between items-center mb-2">
+    <div><p class="text-sm font-bold">0949xxxx - واتساب 5$</p><p class="text-xs text-gray-400">منذ 5 ساعات - بانتظار الدفع</p></div>
+    <div class="flex gap-2"><button class="bg-green-500 text-black px-3 py-1 rounded-full text-xs font-bold">تفعيل</button><button class="bg-zinc-800 px-3 py-1 rounded-full text-xs">رفض</button></div>
+  </div>
 </div>
 </body>
 </html>
